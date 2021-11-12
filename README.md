@@ -6,6 +6,8 @@
 - lastHash: hash of the previous block
 - data: all the transactions, string / array etc.
 - hash: generated from all its own data
+- difficulty: determines number of leading zeros in hex/binary
+- nonce: random number
 
 ### Test-Driven Development
 1. Write some tests (red)
@@ -21,7 +23,6 @@ Benefits of SHA-256
 - Produces a unique value for unique input
 - A one-way function (Data -> Hash)
 - Only can crack it through guess and check method (costly)
-- 
 
 ### Chain Validation (concept of checking chain is built correctly)
 1. Correct block fields present (timestamp, lastHash, data, hash)
@@ -63,3 +64,4 @@ Bitcoin has a goal of adding a new block every 10 minutes
 - HexToBinary
 
 ### Prevent difficulty jump (setting difficulty very low)
+- Attackers can purposely set the difficulty to be very low (easily mine blocks) or very high (causes network to be very slow)
