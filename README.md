@@ -321,3 +321,7 @@ But on top of that, once a wallet starts receiving transactions officially from 
 `heroku addons:create heroku-redis:hobby-dev -a guarded-cliffs-20342`
 `heroku addons:info redis-horizontal-56331`
 `heroku addons:docs heroku-redis`
+`git add -A`
+`git commit -m "Configure Production Code`
+`git push heroku main`
+`heroku logs --tail`
