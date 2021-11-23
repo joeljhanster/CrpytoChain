@@ -6,7 +6,6 @@
     "node": "12.x",
     "npm": "8.x"
   },
-  "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
     "start": "npm run build-client & node index.js",
