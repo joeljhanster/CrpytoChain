@@ -17,7 +17,7 @@ Peer Node: `https://young-cove-89116.herokuapp.com/`
 
 ### Section 3: The Chain | The Blockchain Backend
 - [x] Created the fundamental blockchain class
-- [x] Devleoped functionality to validate the blockchain, to allow for chain replacement
+- [x] Developed functionality to validate the blockchain, to allow for chain replacement
 - [x] Implemented chain replacement
 - [x] Investigated stubbing consolue output in tests to keep the output clean
 
@@ -91,6 +91,11 @@ Peer Node: `https://young-cove-89116.herokuapp.com/`
 - [x] Posted transactions through the fetch API
 - [x] Visualized the transaction pool - and added real-time polling capabilities
 - [x] Added a way to mine a block through the frontend
+
+### Section 12: Deploying to Production and Full-Stack Improvements
+- [x] Deployed the project to production
+- [x] Added a known addresses feature with both the backend and frontend
+- [x] Support a paginated exploration of the blocks with both the backend and frontend
 
 # Notes
 ### Block
@@ -331,3 +336,17 @@ But on top of that, once a wallet starts receiving transactions officially from 
 `git push heroku main`
 `heroku logs --tail`
 `heroku open`
+
+# Challenges List
+1. Download the Blockchain to the File System
+  - Currently, the blockchain completely lives in the JavaScript memory. Luckily, as long as there is one node in the system running, a copy of the current blockchain is stored. But if all nodes go down, the blockchain progress will die. One solution is to implement blockchain backups by adding a feature to download the blockchain to the file system. A straightforward option is to download the blockchain as json.
+2. Load the Blockchain from the File System
+  - This follows up the previous challenge, which is to implement a feature where the blockchain can be downloaded from the file system. This challenge is to reload the the blockchain in memory using an existing json file representing a chain. The benefit is quicker synchronization on startup for new peers, as well as restoring lost data if the JavaScript memory somehow loses the blockchain.
+3. Transaction Pool Socket Updates
+  - Replace the polling logic in the transaction pool with real-time updates through socket.io. Continually polling the pool, even when there haven't been any updates, could be overkill and eventually overload the server. But using socket.io for real-time updates is an alternative and more clean solution.
+4. Refactor the React app to use Redux
+  - There are certain places in the application, where certain API requests are overdone. For example, the known-addresses, and wallet-info section are fetched on every component visit. But this can be fixed by redux which maintains an internal store. Plus, if the app has any logic where a smaller component needs to update global state, redux would definitely come in handy.
+5. Fresh Keys Per Transaction
+  - This challenge is to implement a solution to a possible attack vector which tracks a public key's usage throughout many transactions, and attemps to decrypt its private key. A solution to this, is to implement a wallet, that creates a fresh set of keys on every transactions. It's a lot more overhead - but perhaps more secure.
+6. Beef Up the Proof-of-Work and Display Mining Progress
+  - Beef up the proof-of-work algorithm by signicantly increasing the MINING_RATE. Display real-time feedback of the proof-of-work algorithm in the frontend (socket.io could come in handy).
