@@ -1,4 +1,5 @@
 # Udemy Course: Build a Blockchain & Cryptocurrency | Full-Stack Edition
+Full-stack blockchain programming course! A backend + frontend with Node.js, Jest, Express, React, Heroku, & more!
 
 ### Section 2: Blocks | The Blockchain Backend
 - [x] Set up the overall blockchain application
@@ -65,6 +66,26 @@
 - [x] Valdiated incoming transaction input balances
 - [x] Prevented duplicate transactions from appearing in a block's data
 - [x] Validated the entire transaction itself when accepting new user-contributed blockchains
+
+### Section 10: The Frontend Blockchain
+- [x] Started serving a frontend page using the existing express server
+- [x] Added JavaScript to the frontend
+- [x] Built React into the frontend using parcel-bundler
+- [x] Set up an efficient development workflow using parcel
+- [x] Created the core App component to house the main React components
+- [x] Used the fetch API to request backend data and serve it on the frontend
+- [x] Visualized the blocks from the backend
+- [x] Stylized the application to make it not look like a barebones skeleton HTML site
+- [x] Created a block component that inherited data from the core Blocks component through props
+
+### Section 11: The Frontend Cryptocurrency
+- [x] Created toggle-able transaciton displays
+- [x] Built a reusable frontend transaction component
+- [x] Added routing for a multi-page application that renders different content based on the url
+- [x] Support the conducting of transactions through a form
+- [x] Posted transactions through the fetch API
+- [x] Visualized the transaction pool - and added real-time polling capabilities
+- [x] Added a way to mine a block through the frontend
 
 # Notes
 ### Block
