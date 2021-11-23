@@ -325,3 +325,4 @@ But on top of that, once a wallet starts receiving transactions officially from 
 `git commit -m "Configure Production Code`
 `git push heroku main`
 `heroku logs --tail`
+`heroku open`
