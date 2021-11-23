@@ -315,3 +315,9 @@ But on top of that, once a wallet starts receiving transactions officially from 
 - Valid input amounts according balance in blockchain history
 - Block must not have identical transactions (set of transactions with no duplicates)
 
+### Deploying on Heroku
+`heroku login`
+`heroku create`: https://guarded-cliffs-20342.herokuapp.com/
+`heroku addons:create heroku-redis:hobby-dev -a guarded-cliffs-20342`
+`heroku addons:info redis-horizontal-56331`
+`heroku addons:docs heroku-redis`
