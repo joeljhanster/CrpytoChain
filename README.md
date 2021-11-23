@@ -1,6 +1,11 @@
 # Udemy Course: Build a Blockchain & Cryptocurrency | Full-Stack Edition
 Full-stack blockchain programming course! A backend + frontend with Node.js, Jest, Express, React, Heroku, & more!
 
+### Hosted on Heroku
+Root Node: `https://guarded-cliffs-20342.herokuapp.com/`
+Peer Node: `https://young-cove-89116.herokuapp.com/`
+
+
 ### Section 2: Blocks | The Blockchain Backend
 - [x] Set up the overall blockchain application
 - [x] Created the basic building block of the blockchain - with blocks themselves!
